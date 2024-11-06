@@ -1,22 +1,92 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0 10rem;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.app:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.app.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.app .form {
+  padding: 1em;
+  border: 1px red solid;
+  min-width: 350px;
+  display: grid;
+}
+
+.app .form .edit form {
+  display : flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2em;
+}
+
+.app .form .edit form div{
+  display : flex;
+  flex-direction: column;
+}
+
+.app .form .edit form div input{
+  border: none;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.app .form .other .element {
+  border: 1px red solid;
+  margin-top: 2em;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.app .form .other .element .icon {
+  width: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app .resumeContainer {
+  border: 1px red solid;
+  width: auto ;
+  display: flex;
+  flex-direction: column;
+}
+.app .resumeContainer .general{
+  padding-bottom: 1em;
+  border: 1px red solid;
+}
+
+.app .resumeContainer .name{
+  border: 1px red solid;
+  width: 100% ;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.app .resumeContainer .general .contact {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 10em;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.app .resumeContainer .general .contact div{
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+
 
 @keyframes logo-spin {
   from {
