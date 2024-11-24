@@ -56,13 +56,6 @@ function App() {
       schoolStartDate: '12/2016',
       schoolEndDate: '05/2021',
       location: "Ho Chi Minh, VN",
-    },
-    {
-      school:'University of Econommyyyyyyy',
-      degree: 'Financal Statistic',
-      schoolStartDate: '12/2016',
-      schoolEndDate: '05/2021',
-      location: "Ho Chi Minh, VN",
     }
   ])
 
@@ -85,7 +78,7 @@ function App() {
   const [experience, setExperience] = useState([
     {
       company: 'SSI Securities Corporation',
-      position: 'Stock Analysis',
+      position: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi commodi vel, porro maxime fugit impedit minima a tempora? Nobis numquam iure praesentium incidunt eum maxime inventore, quod illo molestiae aspernatur!',
       companyStartDate: '06/2021',
       companyEndDate: '1/2022',
       location: "Ho Chi Minh, VN",

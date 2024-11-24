@@ -19,12 +19,15 @@
 
 .app .form {
   padding: 1em;
-  border: 1px red solid;
   display: grid;
 }
 
 .app .form .edit {
+  background-color: #555555;
+  padding: 1em;
+  border-radius: 1em;
   margin-bottom: 2em;
+  opacity: 0.9;
 }
 
 .app .form .edit form {
@@ -42,7 +45,12 @@
 .app .form .edit form div input{
   border: none;
   border-radius: 10px;
+  background-color: #242424;
   padding: 1em;
+}
+
+.app .form .other {
+  opacity: 0.9;
 }
 
 .app .form .other .select-section {
@@ -126,6 +134,7 @@
   border: none;
   border-radius: 10px;
   padding: 1em;
+  background-color: #242424;
 }
 
 .app .form .other .education-section .education-form .education-form-interaction,
@@ -137,10 +146,20 @@
 
 .app .form .other .education-section .education-form .education-form-interaction button,
 .app .form .other .experience-section .experience-form .experience-form-interaction button{
-  border: 2px purple solid;
   cursor: pointer;
   border-radius: 1em;
   padding: 0 2em;
+  margin: 0.25em;
+}
+
+.app .form .other .education-section .education-form .education-form-interaction .delete,
+.app .form .other .experience-section .experience-form .experience-form-interaction .delete{
+  background-color: #ab3131
+}
+
+.app .form .other .education-section .education-form .education-form-interaction .save,
+.app .form .other .experience-section .experience-form .experience-form-interaction .save{
+  background-color: #507b58
 }
 
 .app .form .other .education-section .collapsed-education-section,
@@ -165,7 +184,6 @@
 .app .form .other .experience-section .add-section {
   display: flex;
   position: relative;
-  border: 2px purple solid;
   cursor: pointer;
   justify-content: center;
   align-items: center;
@@ -182,7 +200,8 @@
 
 
 .app .resumeContainer {
-  border: 1px red solid;
+  border-radius: 1em;
+  background-color: #555555;
   width: auto ;
   display: flex;
   flex-direction: column;
@@ -190,11 +209,9 @@
 
 .app .resumeContainer .general{
   padding-bottom: 1em;
-  border: 1px red solid;
 }
 
 .app .resumeContainer .name{
-  border: 1px red solid;
   width: 100% ;
   text-align: center;
 }
@@ -215,16 +232,22 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  border: red 1px solid;
   padding-top: 1em;
 }
 
+.app .resumeContainer .education-info-section .header-text{ 
+  background-color: rgb(228, 224, 224);
+  text-align: center;
+  margin: 0 2em;
+  color: #555555;
+}
+
 .app .resumeContainer .education-info-section .education-infor{
-  border: red 1px solid;
   display: grid;
   grid-template-columns: repeat(2, 40% 60%);
 }
 
 .app .resumeContainer .education-info-section .education-infor .infor-group-2{
   text-align: start;
+  margin-right: 3em;
 }

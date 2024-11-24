@@ -17,11 +17,11 @@ function ButtonSelection({activeIndex , toggleExpand}) {
         <div className='select-section'> 
             <button className='education-expand' onClick={() => toggleExpand(0)}
             style={activeIndex === 0 ? activeButtonStyle : null}>
-              <h1 style={activeIndex === 0 ? activeTextStyle : null}>Education</h1>
+              <h2 style={activeIndex === 0 ? activeTextStyle : null}>Education</h2>
             </button>
             <button className='expeience-expand' onClick={() => toggleExpand(1)}
                 style={activeIndex === 1 ? activeButtonStyle : null}>
-              <h1 style={activeIndex === 1 ? activeTextStyle : null} >Experience</h1>
+              <h2 style={activeIndex === 1 ? activeTextStyle : null} >Experience</h2>
             </button>
         </div>
     )
@@ -103,10 +103,10 @@ function EducationForm({education , isOpen, toggleOpen, index, addEducation, upd
                     <h4>Delete</h4>
                 </button>
                     <div>
-                        <button className="Save" onClick={handleSave}>
+                        <button className="save" onClick={handleSave}>
                           <h4>Save</h4>
                         </button>
-                        <button className='Cancel' onClick={() => toggleOpen(false)}>
+                        <button className='cancel' onClick={() => toggleOpen(false)}>
                           <h4>Cancel</h4>
                         </button>
                     </div>
@@ -229,10 +229,10 @@ function ExperienceForm({experience, isOpen, toggleOpen, index, addExperience, u
                     <h4>Delete</h4>
                 </button>
                     <div>
-                        <button className="Save" onClick={handleSave}>
+                        <button className="save" onClick={handleSave}>
                           <h4>Save</h4>
                         </button>
-                        <button className='Cancel' onClick={() => toggleOpen(false)}>
+                        <button className='cancel' onClick={() => toggleOpen(false)}>
                           <h4>Cancel</h4>
                         </button>
                     </div>
@@ -271,7 +271,7 @@ function ExperienceSection({experience, updateExperience, addExperience, removeE
 
             <button className={isOpen ? 'add-section hide' : "add-section"} onClick={() => toggleOpen(null)}>
                 <FontAwesomeIcon icon={faPlus} />
-                <h3>Education</h3>
+                <h3>Experience</h3>
             </button>
         </div>
     )

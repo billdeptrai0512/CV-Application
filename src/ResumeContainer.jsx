@@ -105,12 +105,12 @@ export default function ResumeContainer({personal, education, experience}) {
         <Name name={personal.name}/>
         <Contact email={personal.email} phone={personal.phone} address={personal.address}/>
       </div>
-      <div>
+      <div className='general'>
         <EducationContainer 
           education={education} 
         />
       </div>
-      <div>
+      <div className='general'>
         <ExperienceContainer 
           experience={experience} 
         />
