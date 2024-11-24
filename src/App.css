@@ -10,18 +10,21 @@
   gap: 2rem;
 }
 
-.app:hover {
+/* .app .form :hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.app.react:hover {
+.app .resumeContainer:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 
 .app .form {
   padding: 1em;
   border: 1px red solid;
-  min-width: 350px;
   display: grid;
+}
+
+.app .form .edit {
+  margin-bottom: 2em;
 }
 
 .app .form .edit form {
@@ -42,21 +45,141 @@
   padding: 1em;
 }
 
-.app .form .other .element {
-  border: 1px red solid;
-  margin-top: 2em;
-  cursor: pointer;
+.app .form .other .select-section {
+  border: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  width: 100%;
 }
 
-.app .form .other .element .icon {
-  width: 2em;
+.app .form .other .select-section .education-expand {
+  border: none;
+  cursor: pointer;
+  border-top-left-radius: 1em;
+  border-right: 1px solid #242424;;
+  width: 100%;
+}
+
+.app .form .other .select-section .expeience-expand {
+  border: none;
+  border-left: 1px solid #242424;
+  cursor: pointer;
+  border-top-right-radius: 1em;
+  width: 100%;
+}
+
+.app .form .other .education-section,
+.app .form .other .experience-section {
+  height: auto;
+  opacity: 1;
+  transform: translateY(-0.7em);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
+
+.app .form .other .education-section, 
+.app .form .other .experience-section{
+  position: relative;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: #555555;
+  transition: transform 0.25s ease;
+}
+
+.app .form .other .education-section .education-form,
+.app .form .other .experience-section .experience-form  {
+  opacity: 0;
+  height: 0;
+}
+
+.app .form .other .education-section .education-form.open,
+.app .form .other .experience-section .experience-form.open  {
+  opacity: 1;
+  height: auto;
+}
+
+.app .form .other .education-section .education-form form,
+.app .form .other .experience-section .experience-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 2em;
+}
+
+.app .form .other .education-section .education-form form div,
+.app .form .other .experience-section .experience-form form div {
+  display : flex;
+  flex-direction: column;
+}
+
+.app .form .other .education-section .education-form form .date, 
+.app .form .other .experience-section .experience-form form .date{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.app .form .other .education-section .education-form form div input,
+.app .form .other .experience-section .experience-form form div input{
+  border: none;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.app .form .other .education-section .education-form .education-form-interaction,
+.app .form .other .experience-section .experience-form .experience-form-interaction{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.app .form .other .education-section .education-form .education-form-interaction button,
+.app .form .other .experience-section .experience-form .experience-form-interaction button{
+  border: 2px purple solid;
+  cursor: pointer;
+  border-radius: 1em;
+  padding: 0 2em;
+}
+
+.app .form .other .education-section .collapsed-education-section,
+.app .form .other .experience-section .collapsed-experience-section {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  justify-content: start;
+  margin: 1em;
+  padding: 0.5em;
+  width: 100%;
+  z-index: 3;
+}
+
+.app .form .other .education-section .collapsed-education-section.hide,
+.app .form .other .experience-section .collapsed-experience-section.hide {
+  display: none;
+}
+
+
+.app .form .other .education-section .add-section,
+.app .form .other .experience-section .add-section {
+  display: flex;
+  position: relative;
+  border: 2px purple solid;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  margin: 3em 1em;
+  gap: 0.5em;
+  z-index: 3;
+}
+
+.app .form .other .education-section .add-section.hide,
+.app .form .other .experience-section .add-section.hide {
+  display: none;
+}
+
 
 .app .resumeContainer {
   border: 1px red solid;
@@ -64,6 +187,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .app .resumeContainer .general{
   padding-bottom: 1em;
   border: 1px red solid;
@@ -87,26 +211,20 @@
   gap: 5px;
 }
 
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app .resumeContainer .education-info-section{ 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: red 1px solid;
+  padding-top: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app .resumeContainer .education-info-section .education-infor{
+  border: red 1px solid;
+  display: grid;
+  grid-template-columns: repeat(2, 40% 60%);
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.app .resumeContainer .education-info-section .education-infor .infor-group-2{
+  text-align: start;
 }
